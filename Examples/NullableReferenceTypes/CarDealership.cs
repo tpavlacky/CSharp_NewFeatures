@@ -20,7 +20,13 @@ namespace Examples.NullableReferenceTypes
         car.SPZ = "000 0000";
       }
 
-      _cars.Add(car);
+			//null forgiving operator
+			//if (car.SPZ!.Length == 0)
+			//{
+			//	car.SPZ = "000 0000";
+			//}
+
+			_cars.Add(car);
     }
   }
 }

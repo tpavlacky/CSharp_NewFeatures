@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Examples.ValueTuples
+﻿namespace Examples.ValueTuples
 {
-  public class Person
+	public class Person
   {
     public string FirstName { get; set; }
     public string MiddleName { get; set; }
@@ -19,13 +15,13 @@ namespace Examples.ValueTuples
       Age = age;
     }
 
-    public void Deconstruct(out string firstName, out string middleName, out string surname, out int age)
-    {
-      firstName = FirstName;
-      middleName = MiddleName;
-      surname = Surname;
-      age = Age;
-    }
+  //  public void Deconstruct(out string firstName, out string middleName, out string surname, out int age)
+  //  {
+		//	firstName = FirstName;
+		//	middleName = MiddleName;
+		//	surname = Surname;
+		//	age = Age;
+		//}
   }
 
   public class Test
@@ -46,4 +42,15 @@ namespace Examples.ValueTuples
       //int num = age;
     }
   }
+
+	public static class Extensions
+	{
+		public static void Deconstruct(this Person p, out string firstName, out string middleName, out string lastName, out int age)
+		{
+			firstName = p.FirstName;
+			middleName = p.MiddleName;
+			lastName = p.Surname;
+			age = p.Age;
+		}
+	}
 }

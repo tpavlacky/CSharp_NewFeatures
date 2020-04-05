@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Examples.ValueTuples
 {
-  public class Examples
+  public class Returning
   {
     public void Test()
     {

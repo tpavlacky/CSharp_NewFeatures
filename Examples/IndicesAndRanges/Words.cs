@@ -25,9 +25,10 @@ namespace Examples.IndicesAndRanges
       };              // 9 (or words.Length) ^0
 
       var lastWord = words[^1]; //dog
-      //string text = words[new Index(1, true).GetOffset(words.Length)];
+		  //public Index (int value, bool fromEnd = false);
+		  //string text = words[new Index(1, true).GetOffset(words.Length)];
 
-      var quickBrownFox = words[1..4]; // The quick brown fox
+			var quickBrownFox = words[1..4]; // The quick brown fox
       //string[] subArray = RuntimeHelpers.GetSubArray(words, new Range(1, 4));
       
       var lazyDog = words[^2..^0]; //lazy dog
