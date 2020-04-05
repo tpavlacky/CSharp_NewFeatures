@@ -1,7 +1,6 @@
-﻿using CSharp_NewFeatures.Classes;
-using Examples.Classes;
+﻿using Examples.Classes;
 
-namespace CSharp_NewFeatures.PatternMatching
+namespace Examples.PatternMatching.CSharp_7
 {
 	internal class Is_Pattern
 	{
@@ -10,6 +9,36 @@ namespace CSharp_NewFeatures.PatternMatching
 			object @object = new Audi(new PetrolEngine(), MyColor.Black);
 			Test(@object);
 		}
+
+    private void OldSchool(object obj)
+    {
+			#region doubleCast
+      if (obj is Audi)
+      {
+        var audi = (Audi)obj;
+      }
+      else if (obj is Skoda)
+      {
+        var skoda = (Skoda)obj;
+      }
+			#endregion
+
+			#region SingleCast but still ugly
+      var audi2 = obj as Audi;
+      if (audi2 != null)
+      {
+        //...
+      }
+      else
+      {
+        var skoda2 = obj as Skoda;
+        if (skoda2 != null)
+        {
+          //...
+        }
+      }
+			#endregion
+    }
 
 		private void Test(object obj)
 		{

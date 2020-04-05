@@ -1,16 +1,15 @@
-﻿using CSharp_NewFeatures.Classes;
+﻿using System;
 using Examples.Classes;
 using Examples.Interfaces;
-using System;
 
 namespace ConsoleApp
 {
 	class Program
 	{
 		static void Main(string[] args)
-		{
-			#region Default interface implementation
-			ICar car = new Audi(new DieselEngine(), Color.Black);
+    {
+      #region Default interface implementation
+			ICar car = new Audi(new DieselEngine(), MyColor.Black);
 			car.GearUp();
 			#endregion
 
@@ -27,13 +26,13 @@ namespace ConsoleApp
 			var bsColor = baseStats.color;
 			var bsEngine = baseStats.engine;
 
-			(Engine eng, Color col) = audi.GetBaseStats();
+			(Engine eng, MyColor col) = audi.GetBaseStats();
 			eng.GearUp();
-			var blue = col == Color.Blue;
+			var blue = col == MyColor.Blue;
 
 			(var e, var c) = audi.GetBaseStats();
 			e.GearUp();
-			var black = col == Color.Black;
+			var black = col == MyColor.Black;
 			#endregion
 
 			#region Discards
@@ -42,9 +41,9 @@ namespace ConsoleApp
 			d_eng.GearUp();
 
 			//deconstruct
-			(Engine dec_eng, Color dec_color, _) = audi;
+			(Engine dec_eng, MyColor dec_color, _) = audi;
 			dec_eng.GearUp();
-			var dec_orange = dec_color == Color.Orange;
+			var dec_orange = dec_color == MyColor.Orange;
 			#endregion
 		}
 	}

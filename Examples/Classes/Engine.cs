@@ -1,4 +1,4 @@
-﻿namespace CSharp_NewFeatures.Classes
+﻿namespace Examples.Classes
 {
 	public abstract class Engine
 	{

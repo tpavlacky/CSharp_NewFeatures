@@ -1,7 +1,6 @@
-﻿using CSharp_NewFeatures.Classes;
-using Examples.Classes;
+﻿using Examples.Classes;
 
-namespace CSharp_NewFeatures.PatternMatching
+namespace Examples.PatternMatching.CSharp_7
 {
 	public class Case_Pattern
 	{

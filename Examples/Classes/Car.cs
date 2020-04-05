@@ -1,12 +1,13 @@
 ﻿using Examples.Interfaces;
 
-namespace CSharp_NewFeatures.Classes
+namespace Examples.Classes
 {
 	public abstract class Car : ICar
 	{
 		public Engine Engine { get; protected set; }
 		public MyColor Color{ get; protected set; }
 		public abstract string Manufacturer { get; }
+    public string? SPZ { get; set; }
 
 		public Car(Engine engine, MyColor color)
 		{
@@ -14,7 +15,13 @@ namespace CSharp_NewFeatures.Classes
 			Color = color;
 		}
 
-		public void Drive()
+    public void Deconstruct(out MyColor color, out string manufacturer)
+    {
+      color = Color;
+      manufacturer = Manufacturer;
+    }
+
+    public void Drive()
 		{
 		}
 

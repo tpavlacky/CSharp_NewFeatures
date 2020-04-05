@@ -1,8 +1,9 @@
-﻿using CSharp_NewFeatures.Classes;
+﻿using System.Drawing;
 using Examples.Classes;
-using System.Drawing;
+using Examples.Interfaces;
+using MyColor = Examples.Classes.MyColor;
 
-namespace CSharp_NewFeatures.PatternMatching
+namespace Examples.PatternMatching.CSharp_8
 {
 	internal class Switch_Expression
 	{
@@ -13,32 +14,30 @@ namespace CSharp_NewFeatures.PatternMatching
 			var newColor = WithCSharp8(@object);
 		}
 
-		private MyColor BeforeCSharp8(Car car)
-		{
-			switch (car.Color)
-			{
-				case MyColor.Green:
-					break;
-				case MyColor.Yellow:
-					break;
-				case MyColor.Blue:
-					break;
-				case MyColor.White:
-					break;
-				case MyColor.Purple:
-					break;
-				case MyColor.Black:
-					break;
-				case MyColor.Orange:
-					break;
-				case MyColor.Brown:
-					break;
-			}
+		private static KnownColor BeforeCSharp8(ICar car)
+    {
+      switch (car.Color)
+      {
+        case MyColor.Green:
+          return KnownColor.Green;
+        case MyColor.Yellow:
+          return KnownColor.Yellow;
+        case MyColor.Blue:
+          return KnownColor.Blue;
+        default:
+          return KnownColor.White;
+      }
 		}
 
-		private MyColor WithCSharp8(Car car)
+		private static KnownColor WithCSharp8(ICar car)
 		{
-
+      return car.Color switch
+      {
+        MyColor.Green => KnownColor.Green,
+        MyColor.Yellow => KnownColor.Yellow,
+        MyColor.Blue => KnownColor.Blue,
+        _ => KnownColor.White
+      };
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿using CSharp_NewFeatures.Classes;
+﻿using Examples.Classes;
 
 namespace Examples.Interfaces
 {
@@ -7,6 +7,7 @@ namespace Examples.Interfaces
 		Engine Engine { get; }
 		MyColor Color { get; }
 		string Manufacturer { get; }
+		string? SPZ { get; set; }
 
 		void Drive();
 

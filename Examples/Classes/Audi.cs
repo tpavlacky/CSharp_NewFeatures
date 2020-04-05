@@ -1,5 +1,4 @@
-﻿using CSharp_NewFeatures.Classes;
-using System;
+﻿using System;
 
 namespace Examples.Classes
 {
@@ -18,7 +17,7 @@ namespace Examples.Classes
 			manufacturer = Manufacturer;
 		}
 
-		public (Engine engine, MyColor color) GetBaseStats()
+    public (Engine engine, MyColor color) GetBaseStats()
 		{
 			return (Engine, Color);
 		}
