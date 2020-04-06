@@ -14,14 +14,14 @@
       Surname = surname;
       Age = age;
     }
-
-  //  public void Deconstruct(out string firstName, out string middleName, out string surname, out int age)
-  //  {
-		//	firstName = FirstName;
-		//	middleName = MiddleName;
-		//	surname = Surname;
-		//	age = Age;
-		//}
+    
+    public void Deconstruct(out string firstName, out string middleName, out string surname, out int age)
+    {
+      firstName = FirstName;
+      middleName = MiddleName;
+      surname = Surname;
+      age = Age;
+    }
   }
 
   public class Test

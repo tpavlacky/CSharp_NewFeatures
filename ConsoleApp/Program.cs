@@ -46,7 +46,7 @@ namespace ConsoleApp
 			var dec_orange = dec_color == MyColor.Orange;
 			#endregion
 		}
-	}
+  }
 
 	internal class DieselEngine : Engine
 	{

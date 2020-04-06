@@ -39,9 +39,9 @@ namespace Examples.ValueTuples
 		public void ByParenthesis()
 		{
 			//named members
-			(int age, string Aname, string Lang) author = (23, "Sonia", "C#");
-			//un-named members
-			var author = (age: 23, Aname: "Sonia", Lang : "C#");
-		}
+			//(int age, string Aname, string Lang) author = (23, "Sonia", "C#");
+      //un-named members
+			//var author = (age: 23, Aname: "Sonia", Lang : "C#");
+    }
 	}
 }
