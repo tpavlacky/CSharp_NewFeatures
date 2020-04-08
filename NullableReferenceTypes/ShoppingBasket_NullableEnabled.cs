@@ -13,7 +13,7 @@ namespace NullableReferenceTypes.Nullable.Enabled
 		//Valid alternatives are:
 		//private List<ShoppingItem>? _items;    // => list can be null, but the items in it cannot be null
 		//private List<ShoppingItem?> _items;    // => list cannot be null, but the items in it can be null
-		//private List<ShoppingItem>? _items;    // => list can be null and items in it can be null
+		//private List<ShoppingItem?>? _items;    // => list can be null and items in it can be null
 
 			//Discounter is now nullable, because it is optional 
 		public IDiscounter? Discounter { get; set; }
