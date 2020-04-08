@@ -7,7 +7,7 @@ namespace Examples.Interfaces
 		Engine Engine { get; }
 		MyColor Color { get; }
 		string Manufacturer { get; }
-		string? SPZ { get; set; }
+		string SPZ { get; set; }
 
 		void Drive();
 

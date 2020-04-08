@@ -8,7 +8,10 @@ namespace ConsoleApp
 	{
 		static void Main(string[] args)
     {
-      #region Default interface implementation
+			string s = (args.Length > 0) ? args[0] : null;
+
+
+			#region Default interface implementation
 			ICar car = new Audi(new DieselEngine(), MyColor.Black);
 			car.GearUp();
 			#endregion
